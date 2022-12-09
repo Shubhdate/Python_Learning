@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTHON PROGRAMMING</title>
+</head>
+<body>
+    <center><h1>PYTHON PROGRAMMING</h1></center>
+
+    python - high level programming language <br>
+
+    used - web applications, making apis , DATA analysis , cloud technologies <br>
+    
+    download - from python org <br>
+
+    basic code and checking file - <br>
+    <!--
+        print("hello world")
+    -->
+
+    variable declartion and memory allocation - <br>
+    <!--
+    first_num = 10
+    second_num = 55
+    add = first_num + second_num
+    print(add)
+
+
+    variable name should start with lower case character
+    digits are allowed but not at the start
+    _ is allowed to use
+
+    id function - tell us the memory location where our variables value is stored
+    print(id(first_num), id(second_num))
+
+    type function - tell us data type of variable
+    print(type(first_num), type(second_num))
+
+
+    a=10
+    b=10
+    print(id(a), id(b))
+    #here both the value are same so loaction will be also same which is called as object intering
+    -->
+
+    Built in python data types - <br>
+    <!--
+    #int
+    num1=100
+    print(type(num1))
+
+
+    #float - to store deimal numbers
+    num2=10.000001
+    print(type(num2))
+
+
+    #string - for "" '' """ """
+    s = "python"
+    print(s, type(s))
+    q = 'python'
+    print(s, type(s))
+    q = 'python "king"'
+    print(s, type(s))
+
+
+    #list - to add multiple values ie enclosed in square bracket 
+    l = [10,20,30,40, "king", "hello","world"]
+    print(type(l))
+    l.append("to add new element in list if we forgot to add")
+    print(l)
+
+
+    #tuple - store datatypes enclosed in breackets but we cannot add, delete, move that 
+    t = (10,20,30,"shubham")
+    print(t)
+
+    #dicitonary - stores values as format of key or paswords enclosed in curly bracket
+    d = {"NAME":"SHUBHAM DATE"}
+    print(d)
+
+    #set
+    set = {10,20,30}
+    print(set)
+
+    #boolean - true or false
+    b = True
+    print(b)
+    b = False
+    print(b)
+
+
+    #complex - for complex number
+    c = 7 + 9j
+    print(c)
+
+    #if we want to know in detail we can write help(name of datatype)
+    help(str)
+    -->
+
+    Operators in python - remaining<br>
+    <!--
+    #Arithemetic operators - + - * % / // **
+    n1=10
+    n2=23
+    print(n1+n2)
+    print(n1-n2)
+    print(n1*n2)
+    print(n1/n2)
+    print(n1//n2)
+    print(n1**n2)
+    print(n1%n2)
+
+    #Comparison operators - to compare values datatypes ie strings numbers lists dictionary etc < > <= >= == != if right then gives true else gives false
+    n1=100
+    n2=200
+    print(n1>n2)
+    print(n1<n2)
+    print(n1>+n2)
+    print(n1<=n2)
+    print(n1==n2)
+    print(n1!=n2)
+
+    #identity operators - compare the memeory loaction of datatypes and gives answer on that reason is(true) isnot(false)
+    n1=100
+    n2=100
+    print(n1 is n2)
+    print(n1 is not n2)
+
+    l=[10,20,30]
+    l2=[10,20,0]
+    print(l==12)
+    print(l2 is 12)
+    print(l2 is not 12)
+
+    #Assignment Operators - =, +=, -=, *=, /=
+    n1=100
+    # n1= n1 + 100
+    # print(n1)
+
+    n1 += 100
+    print(n1)
+    n1 -= 100
+    print(n1)
+    n1 /= 100
+    print(n1)
+    n1 *= 100
+    print(n1)
+
+    #bitwise operators - for shifting & | ^ >> <<
+    n1=2
+    n2=1
+    print(bin(n1), bin(n2))
+    print(n1 & n2)
+    print(n1 | n2)
+    print(n1 ^ n2)
+    print(n1 >> n2)
+    print(n1 << n2)
+
+    #logical operators - and ,or, not
+    print(10==10 and 20==10)
+    print(10==10 or 20==10)
+    print(not(10==10))
+    print(not(10==20))
+
+    #memebership operators - for checking or searching something in word integers or in data types and gives true or false answers
+    l=[10,20,30,40,50]
+    print(30 in l)
+    print(30 not in l)
+
+    print(60 in l)
+    print(60 not in l)
+    -->
+
+    Conditional Statements -used for valiadtion of cross checking something if, if-else, else<br>
+    <!--
+    # spaces should be given right for all statements better understanding
+    #if condition is wrong then it will not give any output
+    #if condition
+    # if [condition]:
+    #     statements
+
+    n1= 100
+    n2=200
+    if n1 > n2:print("n1 is greater than n2")
+
+    #if else
+    # elif[condition]:
+    #     statements
+    n1= 100
+    n2=200
+    if n1 > n2:print("n1 is greater than n2")
+    elif n2 > n1: print("n1 is smaller than n2")
+
+
+    #else
+    # else[condition]:
+    #     statements
+    n1= 100
+    n2=200
+    if n1 > n2:print("n1 is greater than n2")
+    elif n2 > n1: print("n1 is smaller than n2")
+    else: print("both are equal")
+    -->
+
+    Loops - for loop <br>
+    <!--
+    #for loops - preffer to check something in range or values
+    # for [variable_name] in [iterable datatype]:
+    #     statements
+    #iterable data types - string, list, tuple, set
+    l=[10,20,30,40,50]
+    sum = 0
+    for value in l:
+        sum = sum + value
+        print(sum)
+    #this will give output 10 30 60 100 150
+
+    # range(5) - 0 1 2 3 4 will give us range
+    # range(10,15) - 10 11 12 13 14 
+    # range(10,20,2) - 10 12 14 16 18 
+
+    for value in range(5): print(value)
+    for value in range(10,15): print(value)
+    for value in range(10,20,2): print(value)
+
+    sum = 0
+    for value in range(1,10): 
+        sum = sum + value 
+    print(sum)
+    # gives us last total answers
+
+    #iterating using for loop \continue\break\enumerate
+    l=[10,20,30,40,50,60]
+    key = 40
+    for value in l:
+        if value == key:
+            print("element found")
+            break
+        else:
+            continue
+    else:
+        print("element not found")
+    print("statement after the for loop")
+
+
+
+    l=[10,20,30,40,50,60]
+    key = 40
+    for index,value in enumerate(l):
+        if value == key:
+            print("element found at index", index)
+            break
+        else:
+            continue
+    else:
+        print("element not found")
+    print("statement after the for loop")
+
+
+    l=[10,20,30,40,50,60]
+    key = 400
+    for index,value in enumerate(l):
+        if value == key:
+            print("element found at index", index)
+            break
+        else:
+            pass
+            print("not found")
+    else:
+        print("element not found")
+    print("statement after the for loop")
+
+
+
+    #while loop - preffer to check some condition
+    # while[condition]:
+    #     [statements]
+    # else:
+
+
+    #to find 1-20 number
+    count = 1
+    summ = 0
+    while count <=20:
+        sum = sum + count
+        count = count + 1
+    print(sum)
+    -->
+
+
+    string data type - <br>
+    <!--
+    #strings are immutable, ordered data strcture-support indexing and slicing
+    s="python sample string"
+    print(type(s),id(s))
+
+    #indexing - from ltr to it is 1to infinity and right to left it is -1 to -infinity
+    s="python sample string"
+    print(s[-2])
+    print(s[1])
+    print(s[2])
+    print(s[3])
+    print(s[4])
+    # print(s[40]) - #will tell us out of range
+
+
+    #slicing - 
+    k = "hello world"
+    print(k[0:5])
+    print(k[5:])
+    print(k[:8])
+
+
+    #stride - skips and print the values and alos direction of string
+    p = "hello world"
+    print(p[::2])
+    print(p[::3])
+    print(p[::-1])
+
+
+    #string built in data types - 
+
+    #format
+    n1=100
+    n2=200
+    print("value of n1 is", n1)
+    print("value of n2 is {}".format(n2))
+    print("value of n2 is {val2} value of n1 is {val1}".format(val1=n1,val2=n2))
+
+    #capitalize, upper,lower , title or checking it 
+    s =" hello world"
+    s = s.capitalize()
+    print(s)
+    s = s.upper()
+    print(s)
+    s = s.lower()
+    print(s)
+    s = s.title()
+    print(s)
+
+    s = s.title()
+    print(s.isupper())
+    s = s.title()
+    print(s.istitle())
+    #we dont have for capitalize
+
+
+    #split and join
+    s = "hello, world, python "
+    l = s.split(",")
+    print(l)
+    l = s.split(" ")
+    print(l)
+
+    s1 = (" ").join(l)
+    print(s1)
+    s1 = (",").join(l)
+    print(s1)
+
+
+    #maketrans, translate
+    a="1234"
+    b="abcd"
+    c="python is abcd"
+    table = str.maketrans(b,a)
+    result = c.translate(table)
+    print(result)
+
+
+    #index, find , rfind functiona="1234"
+    c="python ,python, python ,is, abcd"
+    print("python" in c)
+    print(c.index("python"))
+    print(c.rfind("python"))
+
+
+    #strip
+    s = "     this is sample string    "
+    s1 = s.strip(" ")
+    print(s1)
+    s = "&&&&&this is sample string&&&&&"
+    s1 = s.strip("&")
+    print(s1)
+
+
+    s = "python"
+    s1 = s.center(20, "&")
+    print(s1)
+
+
+    #replace
+    s = "hello world"
+    s1 = s.replace("world","king")
+    print(s1)
+    -->
+
+
+    list in python - <br>
+    <!--
+    #lists
+    #list are mutable - add update and delete
+    # list is ordered indexing and slicing
+    #store any types of data
+    #list copy on basis of memory location
+    l =[10,20,30,40, "hello","world",[100,200,300]]
+    print(l,type(l))
+
+    #indexing and slicing
+    l =[10,20,30,40, "hello","world",[100,200,300]]
+    print(l[-1][1])
+    print(l[1:3])
+
+
+    a = [10,20,30,40]
+    for value in l[:2]:
+        print(value)
+
+
+    #append, extend, insert - to add element is list
+    a = [10,20,30,40]
+    a.append(600)
+    print(a)
+    a.extend([100,200,300,400])
+    print(a)
+    a.insert(1,1000)
+    print(a)
+
+    #update , delete method 
+    l=[10,20,30,40,50]
+    l[2] = 300
+    print(l)
+
+    #delete - pop, clear, remove del
+    l=[10,20,30,40,50]
+    r=l.pop()
+    print(l,r)
+    r=l.pop(2)
+    print(l,r)
+    r=l.remove(40)
+    print(l)
+    l.clear()
+    print(l)
+
+
+    l=[100,200,30,40,50]
+    l.sort()
+    print(l)
+    l.reverse()
+    print(l)
+    print(l.index(30))
+    print(l.count(30))
+
+
+    l=[100,200,30,40,50]
+    l2=[10,20,30,40,50]
+    print(l + l2)
+
+    l=0.1
+    print(l * 10)
+    -->
+
+    Tuple - <br>
+    <!--
+      #Tuple
+    #immutable data structure
+    #oredered indexing and slicing
+
+    t=(10,20,30,40,50)
+    print(t.index(20))
+    print(t.count(20))
+
+
+    t=(10,20,30,40,50)
+    for t in enumerate(t):
+        print(t)
+
+    # list into tuple
+    l=[10,20,30,40,50]
+    t = tuple(l)
+    print(t)
+
+    t=("a","b","c","d")
+    l=list(t)
+    print(l)  
+    -->
+
+    Dictionary data type - <br>
+    <!--
+    #Dictionary data type
+    #mutable, unoredered data structure, key should be unique 
+    #cant store duplicate key
+    #we can store only int float string tuple
+    d = {"hello_id":101,"name":"shubham","email":"abc@gmail.com","name":"date"}
+    print(d)
+    d = {"hello_id":101,"name":"shubham","email":"abc@gmail.com","name":"date",(10,20,30):1000}
+    print(d)
+
+
+    #add and update the elements
+    d["number"]=1234567
+    print(d)
+
+
+    #get and setdefault
+    print(d.get("name")) #tell us value of key
+    print(d.get("age","18+")) #since key not exist but we want to add and update answers
+
+
+    print(d.setdefault("name"))
+
+    print(d.setdefault("surname")) #since surname doesnot exist in list so it will add and return us none value
+    print(d)
+
+
+    #iterating
+    for x in d:
+        print(x) # we will get keys 
+
+    for key in d: 
+        print(key,d[key]) # we will get keys and its value
+
+
+    #for 1:1,2:4,3:9....10:100
+    d={}
+    for value in range(1,11):
+        d[value] = value * value
+    print(d)
+
+    d={}
+    for value in range(1,11):
+        d[value] = value * value
+        print(d)
+
+
+    #keys,values,items
+    print(d.keys())
+    print(d.values())
+    print(d.items())
+
+    #update and delete 
+    # list into dictionary
+    l1=[1,2,3,4,5]
+    l2=[10,20,30,40,50]
+    d=dict(zip(l1,l2))
+    print(d)
+
+    l=[1,2,3,4,5]
+    d = dict.fromkeys(l)
+    print(d)
+    d = dict.fromkeys(l,0)
+    print(d)
+
+
+    #merging to dictionary
+    l1={1:2,2:4,3:5,4:6,5:7}
+    l2={10:1,20:2,30:3,40:4,50:5}
+    l1.update(l2)
+    print(l1)
+
+
+    #delete
+    l1={1:2,2:4,3:5,4:6,5:7}
+    r =l1.pop(1)
+    print(l1,r)
+
+    l1={1:2,2:4,3:5,4:6,5:7}
+    r =l1.popitem() # picks randomy value
+    print(l1)
+
+    l1.clear()
+    print(l1)
+    -->
+
+
+    set data types - <br>
+    <!--
+    #sets- - are mutable, all elements in the sets should be unique int,float tuple string can only be added
+
+    s ={10,20,30,40,50}
+    print(s)
+
+    #add elements
+    s ={10,20,30}
+    s.add(40)
+    print(s)
+
+    #update 
+    s1 ={10,20,30,40,60}
+    s2 ={10,20,30,40,50}
+    s3 = s1.union(s2)
+    print(s3)
+    s3 = s1.intersection(s2)
+    print(s3)
+    s3 = s1.difference(s2)
+    print(s3)
+    s3 = s1.symmetric_difference(s2)
+    print(s3)
+
+
+    s1.update(s2)
+    print(s1)
+    s1.intersection_update(s2)
+    print(s1)
+    s1.difference_update(s2)
+    print(s1)
+    s1.symmetric_difference(s2)
+    print(s1)
+
+
+    s1={10,20,30,40,50}
+    s2={10,20,30}
+    print(s2.issubset(s1))
+    print(s2.issuperset(s1))
+
+    #list into set
+    l = [10,20,30,40]
+    s = set(l)
+    print(s)
+
+
+    l1 = [10,20,30,40]
+    l2= [50,60,70,80,40,30,20,10]
+    s1 = set(l1)
+    s2 = set(l2)
+    s3 = s1.union(s2)
+    print(s3)
+    l3 = list(s3)
+    l3.sort()
+    print(l3)
+
+
+    #delete - pop , remove,discard,clear del
+
+    s={10,20,30,40,50,60}
+    r = s.pop() #random value
+    print(s,r)
+
+    s.remove(10)
+    print(s)
+
+    s.discard(20)
+    print(s)
+
+    s.clear()
+    print(s)
+    -->
+
+
+    Math and random - <br>
+    <!--
+    #sum
+    l=[10,20,30,40,50]
+    print(sum(l))
+    print(max(l))
+    print(min(l))
+
+    #roundoff
+    num=22.009
+    print(round(num))
+
+    #math module
+    import math
+    l=[0.1] * 10
+    print(l)
+    print(sum(l))
+
+    print(math.fsum(l))
+
+
+    #lowerbound and upperbound
+    num1= 15.9999
+    print(math.floor(15.9999),math.ceil(15.9999))
+
+
+    #squareroot
+    print(math.sqrt(20))
+    print(math.sqrt(399))
+
+    #factorial
+    print(math.factorial(5))
+    print(math.factorial(34))
+
+    num1=45.999
+    print(math.modf(num1))
+
+
+    #power
+    print(math.pow(10,2))
+    print(math.pow(19,2))
+
+
+    #log
+    print(math.log(10)) #base to e
+    print(math.log10(34))
+    print(math.log2(34))
+
+    #trignometric
+    print(math.sin(30)) #degrees
+    print(math.sin(math.radians(30)))
+    print(math.cos(30)) 
+    print(math.tan(30)) 
+
+    #will get all math operation but right import math
+    # help(math)
+    # print(dir(math))
+
+
+    #random
+    import random
+    # print(random.random())
+    l=[1,2,3,4,5,6]
+    print(random.choice(l))
+    print(random.randint(1,3))
+    print(random.randrange(1,3))
+    -->
+
+
+    Userdefined function - <br>
+    <!--
+    #userdefined functions
+    #used for code reusing, modularity - logical
+    #function call
+    #function definition
+
+    s="python","html"
+    print(s.index("html")) #index is builtin function
+
+
+
+    def value_reverse(value):
+        reverse = value[::-1]
+        print(reverse)
+    s="python"
+    result = value_reverse(s)
+
+
+    l=[10,20,30,40,50]
+    result = value_reverse(l)
+    print(result)
+
+
+
+    #parameter passing techniues 
+
+    #positional argument
+    def linear_search(l,key):
+        for value in l:
+            if key==value:
+                return True
+        else:
+            return False
+
+
+    l=[10,20,30,40,50]
+    key = 30
+    result = linear_search(l,key)
+    print(result)
+
+    #default argument 
+    #password genereator(char,upper,lower,special char,digits)
+    # print(ord('a'),ord('z'))
+    # print(ord('A'),ord('Z'))
+    # print(char(97))
+
+    import random
+    def gen_password(Length = 8):
+        Upper = chr(random.randint(65,90))
+        Lower = chr(random.randint(97,112))
+        l = ['@','#','$']
+        special = random.choice(l)
+        digits = random.randint(10000,99999)
+
+        password = Upper + Lower + special + str(digits)
+        return password
+
+
+    result = gen_password()
+    print(result)
+
+
+    #keyword argument
+
+    #validating pasword somethoing
+    def validate(username,password):
+        if username == "ABC" and password =="ABC@123":
+            print("valid password")
+        else:
+            print("Invalid password")
+    validate("abc123","Abc@123")
+    validate("ABC","Abc@123")
+    validate("ABC","ABC@123")
+    validate(username="ABC",password="Abc@123")
+
+
+    #variable length positional argument
+
+    def add_value(*args):
+        l = []
+        for value in args:
+            l.append(value)
+        return l
+
+    result = add_value(10,20,30,40,50)
+    print(result)
+    result = add_value(10,20)
+    print(result)
+    result = add_value(10,20,30)
+    print(result)
+
+
+    #variable length keyword argument
+    #name, email,contact,dob
+
+    def get_details(**keywordargs):
+        print(keywordargs)
+    result = get_details(name="abc",email="abc@gmail.com",contact="12345",dob="12-10-2002")
+    print(result)
+    result = get_details(name="abc",contact="12345",dob="12-10-2002")
+    print(result)
+    result = get_details(name="abc",email="abc@gmail.com",dob="12-10-2002")
+    print(result)
+    -->
+
+    recursive functions - <br>
+    <!--
+    #recursive - 
+    #factorial of numbers
+    def factorial(num):
+        if num == 1: return 1
+        else: return num * factorial(num - 1)
+
+    n1 = 5
+    result = factorial(n1)
+    print(result)
+
+
+    #binary search - to search something from the list by checking again and again
+    def binary_search(l,key):
+        if len(l) ==0:
+            return False
+        else:
+            mid = len(l) //2
+
+            if l[mid] == key:
+                return True
+            elif key < l[mid]:
+                return binary_search(l[:mid],key)
+            else: 
+                return binary_search(l[mid+1:],key)
+
+    l=[10,20,30,40,50,60,70,80,90]
+    key = 90
+    result =  binary_search(l,key)
+    print(result)
+    -->
+
+
+    Creating modules and packages - accessing same function from different .py file to ur file <br>
+    <!--
+        #module and packages
+    # import Recursive
+
+    # l=[10,20,30,40,50,60,70,80,90]
+    # key = 80
+    # result =  binary_search(l,key)
+    # print(result)
+
+    # help(Recursive)
+
+
+    #RE module Regx Meta-cahaecteristic Module - 
+    # import re
+    # . - any cahr
+    # [a-zA-Z] - cahr class
+    # [0-9] - digit class
+    # + - atleast one [a-z]+
+    # * - zero or more
+    # ^ - start of the 
+    # & - end of the 
+    # ? - optional
+    # [a-z]{2,4} - 
+
+    import re
+    s = "ABCDE1234A"
+    r = re.compile("^[A-Z]{5}[0-9]{4}[A-Z]&")
+    l = re.findall(r,s)
+    print(l)
+
+    #if phone number is valid or not
+    s = "0987654321"
+    r =re.compile("^[0-9]{9}&")
+    l = re.findall(r,s)
+    print(l)
+
+
+    #to check dd--mm-yyyy
+    s = "12-05-1022"
+    r = re.compile("^[0-9]{2}-[0-9]{2}-[0-9]{4}$")
+    l = re.findall(r,s)
+    print(l)
+
+
+    #regular expression - GROUPS - useful for extracting data from the group ?p<> only for specicying
+    s = "12-05-2022"
+    r = re.compile("^(?P<Date>[0-9]{2})-(?P<Month>[0-9]{2})-(?P<year>[0-9]{4})$")
+    m = re.search(r,s)
+    if m:
+        # print(m.group(1))
+        print(m.group("year"))
+    else:
+        print("pattern not found")
+    print(m.group())
+
+    #[0-9] \d
+    #[^0-9] \D
+
+    #[a-zA-Z0-9] \w
+    #\W
+
+    #space - \s
+    # \S
+    -->
+
+    List Comprehension - <br>
+    <!--
+    #List Comprehension - can be performed in list, tuple, dictionary or on same set of eleemnts
+    l=[10,20,30,40,50]
+    l2=[]
+    for value in l:
+        l2.append(value * value)
+    print(l2)
+
+    #method 2
+    l=[10,20,30,40,50]
+    l2=[value * value for value in l]
+    print(l2)
+
+    l=[10,20,30,40,50,60,70,80]
+    l2=[value for value in l if value%2 == 0]
+    print(l2)
+
+
+    l=["abc","abcd","abcde"]
+    l2=[len(value) for value in l]
+    print(l2)
+
+
+    l2=[(value1,value2) for value1 in range(1,5) for value2 in range (100,105)]
+    print(l2)
+
+
+    l=[[1,2],[3,4,5],[6,7,8,9]]
+    l2=[]
+    for value in l:
+        for val2 in value:
+            l2.append(val2)
+    print(l2)
+
+    l=[[1,2],[3,4,5],[6,7,8,9]]
+    l2 = [val2 for value in l for val2 in value]
+    print(l2)
+    # l2=[1,2,3,4] output
+
+
+    l=[100,105,110,115,120]
+    l2=["even" if value%2 ==0 else "odd" for value in l]
+    print(l2)
+    -->
+
+
+    Functional programming (Map-filter-lamda) - 
+    <!--
+    #Functional Programming - 
+    #map filter lamda are faster than ist compression
+
+    #map
+    def sqr(num1):
+        return num1**2
+    l=[10,20,30,40,50]
+    result = list(map(sqr,l))
+    print(result)
+
+
+    def add(num1,num2):
+        return num1+num2
+    l1=[10,20,30,40,50]
+    l2=[10,20,30,40,50,60,70]
+    result = list(map(add,l1,l2))
+    print(result)
+
+
+    #filter
+    def check_num(num1):
+        if num1 % 2 ==0:
+            return True
+        else:
+            return False
+    l=[10,20,30,40,50,60,70, 73,75,77]
+    result = list(filter(check_num,l))
+    print(result)
+
+
+    #lambda - use for only one function
+
+    l=[10,20,30,40,50]
+    result = list(map(lambda num1:num1**2,l))
+    print(result)
+
+
+    l=[10,20,30,40,50,60,70, 73,75,77]
+    result = list(filter(lambda num:num%2==0,l))
+    print(result)
+    -->
+
+
+    Generator Function - <br>
+    <!--
+    #Generator Function - used to save memory in python
+
+    def printVal(l):
+        for value in l:
+            print(value)
+    l=[10,20,30,40,50,60,70]
+    printVal(l)
+
+    #fibonnaci series
+    def fibo():
+        first_num = 0
+        second_num = 1
+        yield second_num
+        while(True):
+            next_val = first_num + second_num
+            yield next_val
+            first_num, second_num = second_num, next_val
+
+    g = fibo()
+    print(g)
+    print(next(g))
+    print(next(g))
+    print(next(g))
+    print(next(g))
+
+    for value in range(20):
+        print(next(g))
+    -->
+
+
+    Iterators nad Itertools - <br>
+    <!--
+    #Iterators nad Itertools - faster than lists
+    l=[100,200,300,400,500]
+    i = iter(l)
+    print(i)
+    print(next(i))
+    print(next(i))
+
+    #convert to iters
+    import itertools
+    l1=[10,20,30,40,50,60]
+    l2=[100,200,300,400,500]
+    l3=[1000,2000,3000,4000,5000]
+    i = itertools.chain(l1,l2,l3)
+    print(i)
+    print(next(i))
+    print(next(i))
+    print(next(i))
+    print(next(i))
+    print(next(i))
+    print(next(i))
+    print(next(i))
+    print(next(i))
+
+
+    l1=[10,20,30,40,50,60]
+    count = 0
+    for value in itertools.cycle(l1):
+        if count < 20:
+            print(value)
+        else:
+            break
+        count+=1
+
+
+    l1=[10,20,30,40,50,60]
+    count = 0
+    for value in itertools.repeat(l1):
+        if count < 20:
+            print(value)
+        else:
+            break
+        count+=1
+
+
+    l=[10,20,30,40,50,60]
+    i = iter(l)
+    t = itertools.tee(i)
+    print(t)
+    for value in t[0]:
+        print(value)
+    for value in t[1]:
+        print(value)
+
+
+    l=[1,2,3,4,5,6]
+    print(list(itertools.permutations(l,2)))
+    print(list(itertools.combinations(l,2)))
+    print(list(itertools.combinations_with_replacement(l,2)))
+    -->
+
+    File operations in python - <br>
+    <!--
+    #File Operations
+    # r = read r+
+    # w = write w+
+    # a = append a+
+
+
+    #READ
+    # fp = open("javaprogram.txt","r")
+    # content = fp.read()
+    # print(content)
+
+
+    # #to read specify caharcters
+    # fp = open("javaprogram.txt","r")
+    # content = fp.read(20)
+    # print(content)
+
+    # #readlines and readline
+    # fp = open("javaprogram.txt","r")
+    # content = fp.readlines()
+    # print(content)
+
+    # fp = open("javaprogram.txt","r")
+    # content = fp.readlines()
+    # print(content[:10])
+
+    # fp = open("javaprogram.txt","r")
+    # content = fp.readline()
+    # print(content)
+
+
+    #WRITE - it will delete all content
+    #WE CANNOT PERFORM READ OPERATION IN IT
+
+    fp = open("input.txt","w")
+    content = fp.write("write this line to a file")
+    print(content)
+
+    fp = open("input.txt","w")
+    content = fp.write("hello")
+    print(content)
+
+    #tell and seek
+    #tell will help us to finnd current file position
+    #seek will help us to change the file position
+    # offset = number of charcter
+    # position - 0(start of the file) 1(current position) 2(end of the File )
+    # eg. seek(15,0) - change the fp by 15 char from start of the file )
+    #eg.seek(0,2) - change the fp by 0 cahr from end of the file
+
+    #w+ - write + read - we cannot get our old content but we can write new content
+
+    fp = open("input.txt","w+")
+    print(fp.tell())
+    fp.write("king is back")
+    print(fp.tell())
+    fp.seek(0,0)
+    print(fp.tell())
+    content = fp.read()
+    print(fp.tell())
+    print(content)
+
+
+    #r+ - read+write - maintain the old content and also we can write new content
+    fp = open("input.txt","r+")
+    content = fp.read()
+    print(content)
+    fp.write("\n\n sample line is added using python script")
+
+
+    # a and a+ - fp is at end
+    # a - only write
+    # a+ - both read and write operation
+    fp = open("input.txt","a+")
+    print(fp.tell())
+    content = fp.read()
+    print(content)
+
+
+    # r - fp -start, file should already present, read
+    # r+ - fp - start, file should already present, read + write
+
+    # w - fp - strat, create a new file, write
+    # w+ - fp - start, create a new file , write =  read
+
+    # a - fp - end, create a new file, write at the End 
+    # a+ - fp - end, create a new file , write + read
+    -->
+
+
+    Parsing JSON fils using python - <br>
+    <!--
+    #JSON File operation - 
+    #used in web developnment for sending msg to client from server side
+    # json objects       dict{"key":"value"}
+    # numbers 10 10.55   int float  
+    # array [10,"string"]  list
+    #      tuple
+    #" "     '' ""  """ ""
+
+    import json
+    handle = open("json.json","r")
+    content = handle.read()
+    print(content)
+
+    #convert json into python
+    import json
+    handle = open("json.json","r")
+    content = handle.read()
+    d = json.loads(content)
+    print(d)
+
+    d = json.loads(content)
+    print(d['dependencies'])
+    -->
+
+    XML files - <br>
+    <!--
+    #XML File operations
+    import xmltodict
+    handle = open("xml.xml","r")
+    content = handle.read()
+    d = xmltodict.parse(content)
+    print(d['Result']['RequestCode'])
+    d['Result']['RequestCode'] = 4
+    x = xmltodict.unparse(d)
+    # print(content)
+    print(d)
+    -->
+
+    Object Oreinted Programming - <br>
+    <!--
+    #oop
+    class Account:
+        count = 0
+        @classmethod
+        def incr_count(cls):
+            cls.count +=1
+        
+        @classmethod
+        def get_count(cls):
+            return cls.count 
+
+        @staticmethod
+        def print_val():
+            print("static method in class")
+
+        def __init__(self,cust_id,name,initail_bal=0):
+            self.__id = cust_id
+            self.__name = name
+            self.__balance = initail_bal
+            Account.incr_count()
+        
+        def get_balance(self):
+            return self.__balance
+        def get_id(self):
+            return self.__id
+        def get_name(self):
+            return self.__name
+        def deposite(self,ammount):
+            self.__balance = self.__balance + ammount
+            return self.__balance
+
+        def withdraw(self,ammount):
+            if ammount > self.__balance:
+                return "Insufficient balance"
+            else:
+                self.__balance -= ammount
+                return self.__balance
+
+
+    customer1 = Account("101","ABC")
+    # Account(customer1,"101","ABC")
+    # print(customer1)
+
+    customer2 = Account("102","XYZ")
+    # Account(customer2,"102","XYZ")
+    # print(customer2)
+
+    customer3 = Account("103","PQR")
+    # Account(customer3,"103","PQR")
+    # print(customer3)
+
+    # print(Account.count)
+    # print(customer1.count)
+    # print(customer2.count)
+    # print(customer3.count)
+
+    # Account.count +=5
+    # print(customer1.count)
+    # print(customer2.count)
+    # print(customer3.count)
+
+    # customer1.count = 100
+    # print(Account.count)
+    # print(customer1.count)
+    # print(customer2.count)
+    # print(customer3.count)
+
+    # print(Account.__dict__)
+    # print(customer1.__dict__)
+    # print(customer2.__dict__)
+    # print(customer3.__dict__)
+
+    # print(Account.get_count())
+
+    Account.print_val()
+    -->
+
+    WEB SCRAPPING - <br>
+    <!--
+        import requests
+from bs4 import BeautifulSoup
+
+response = requests.get("https://www.magicbricks.com/property-for-sale/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai")
+print(response)
+
+
+#for verfication
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get("https://www.magicbricks.com/property-for-sale/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai")
+print(response.status_code)
+
+
+
+import requests
+from bs4 import BeautifulSoup
+response = requests.get("https://www.magicbricks.com/property-for-sale/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai")
+# print(response.status_code)
+soup = BeautifulSoup(response.content,"html.parser")
+print(soup)
+print(soup.prettify)
+
+
+#to find something
+# find('a')
+# find_all('div/img')
+# find_parent("a")
+#find_next_sibling("a")
+
+card = soup.find("div",attrs={"class":"mb-srp__card__container"})
+print(card)
+price = card.find("div",attrs={"class":"mb-srp__card__price--amount"})
+print(price)
+    -->
+
+    Database Access using python - <br>
+    <!--
+    import sqlite3
+conn = sqlite3.connect("example1.db")
+c = conn.cursor()
+# c.execute("""CREATE TABLE IF NOT EXISTS EMP(ID INT PRIMARY KEY, NAME TEXT, SALARY REAL)""")
+# c.execute("INSERT INTO EMP(ID,NAME,SALARY) VALUES(101,'ABC',80000)")
+# c.execute("INSERT INTO EMP(ID,NAME,SALARY) VALUES(102,'PQR',70000)")
+# c.execute("INSERT INTO EMP(ID,NAME,SALARY) VALUES(103,'XYZ',60000)")
+# conn.execute("COMMIT")
+c.execute("""SELECT * FROM EMP""")
+# print(next(c))
+# print(next(c))
+# print(next(c))
+
+# for row in c:
+#     print(row)
+
+#for update 
+# c.execute("UPDATE EMP SET SALARY = 65000 WHERE ID=102")
+# conn.execute("COMMIT")
+# c.execute("SELECT * FROM EMP WHERE ID = 102")
+# print(next(c))
+# for row in c:
+#      print(row)
+
+
+#for delete
+# c.execute("DELETE FROM EMP WHERE ID=103")
+# conn.execute("COMMIT")
+# c.execute("""SELECT * FROM EMP""")
+# for row in c:
+#     print(row)
+    -->
+
+    Python Decorators - <br>
+    <!--
+        #Python Decorators -
+    def deco(func):
+        def new_func(val1,val2):
+            if type(val1) ==type(val2):
+                return func(val1,val2)
+            else:
+                return func(str(val1),str(val2))
+        return new_func
+    @deco
+    def concat(val1,val2):
+        return val1+val2
+    result = concat(20,10)
+    print(result)
+    -->
+
+
+    
+    
+
+
+
+    
+
+
+
+</body>
+</html>

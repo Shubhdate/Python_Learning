@@ -1,0 +1,477 @@
+SAVINGACCOUNT -
+SavingsAccount 
+{ private double balance; private double interest; public SavingsAccount() 
+{ 
+ balance = 0;  
+	interest = 0; 
+} public SavingsAccount(double initialBalance, double initialInterest) 
+{ 
+ balance = initialBalance;  interest = initialInterest; } public void deposit(double amount) 
+{ 
+ 	balance = balance + amount; 
+} public void withdraw(double amount) 
+{ 
+ 	balance = balance - amount; 
+} public void addInterest() 
+{  	balance = balance + balance * interest; 
+} public double getBalance() 
+{ 
+ 	return balance; 
+} } public class SavingsAccountTester 
+{ public static void main(String[] args) { 
+ 	SavingsAccount a = new SavingsAccount(1000, 0.10); 
+ 	a.withdraw(250); 
+ 	a.deposit(400); 
+ 	a.addInterest(); 
+ 	System.out.println(a.getBalance()); 
+}     
+} 
+
+
+
+ADDITIONOFTHREENUMBER- 
+class Addition1
+{
+void add(int a,int b)
+{
+int c;
+c=a+b;
+System.out.println("The two nos. addition="+c);
+}
+void add(int a,int b,int c)
+{
+int d;
+d=a+b+c;
+System.out.println("The three nos. addition="+d);
+}
+public static void main(String args[])
+{
+Addition1 a=new Addition1();
+a.add(2,3);
+a.add(4,5,6);
+}
+}
+
+
+
+
+STRING EQURANCE(SEA SHELLS) - 
+Syntax:
+StringBuffer Variable_name = new StringBuffer("String_sequence");
+
+public class StringBufferExample {
+	public static void main(String[] args) {
+		StringBuffer sb = new StringBuffer("She sells sea shells in the seashore ");
+		System.out.println("Given stringbuffer is: " + sb);
+		System.out.println("length of stringbuffer is: " + sb.length() + ", capacity of stringbuffer is: " + sb.capacity());
+		System.out.println("character at index 5 of the stringbuffer is: " + sb.charAt(5));
+		System.out.println("codePointAt index 5 of the stringbuffer is: " + sb.codePointAt(5));
+		System.out.println("appendind the stringbuffer: " + sb.append("on the sea shore"));
+		System.out.println("substring of stringbuffer from index 10 to 20 is: " + sb.substring(10,20));
+		System.out.println("reverse of the stringbuffer is: " + sb.reverse());
+	}
+}
+
+
+
+ELEMENTSINVECTOR - 
+import java.util.*;
+public class VectorDemo {
+
+   public static void main(String args[]) {
+      // initial size is 3, increment is 2
+      Vector v = new Vector(3, 2);
+      System.out.println("Initial size: " + v.size());
+      System.out.println("Initial capacity: " + v.capacity());
+      
+      v.addElement(new Integer(1));
+      v.addElement(new Integer(2));
+      v.addElement(new Integer(3));
+      v.addElement(new Integer(4));
+      System.out.println("Capacity after four additions: " + v.capacity());
+
+      v.addElement(new Double(5.45));
+      System.out.println("Current capacity: " + v.capacity());
+      
+      v.addElement(new Double(6.08));
+      v.addElement(new Integer(7));
+      System.out.println("Current capacity: " + v.capacity());
+      
+      v.addElement(new Float(9.4));
+      v.addElement(new Integer(10));
+      System.out.println("Current capacity: " + v.capacity());
+      
+      v.addElement(new Integer(11));
+      v.addElement(new Integer(12));
+      System.out.println("First element: " + (Integer)v.firstElement());
+      System.out.println("Last element: " + (Integer)v.lastElement());
+      
+      if(v.contains(new Integer(3)))
+         System.out.println("Vector contains 3.");
+         
+      // enumerate the elements in the vector.
+      Enumeration vEnum = v.elements();
+      System.out.println("\nElements in vector:");
+      
+      while(vEnum.hasMoreElements())
+         System.out.print(vEnum.nextElement() + " ");
+      System.out.println();
+   }
+}
+
+
+
+
+MINIMUMACCOUNT BALANCE - 
+import java.util.Scanner;
+class MinimumAccountBalance extends Exception {
+    String message;
+    public MinimumAccountBalance(String message) {
+        this.message = message;
+    }
+    // @Override
+    public String toString() {
+        return message;
+    }
+}
+public class UserDefinedException {
+    static double current_balance = 1000;
+    public static void main (String [] args) throws MinimumAccountBalance {
+        Scanner s = new Scanner (System.in);
+        System.out.println("Enter amount to withdrawal");
+        int n = s.nextInt();
+        try {
+            if (current_balance < n) {
+                throw new MinimumAccountBalance("Insufficient funds ! your Current balance is " + current_balance);
+            } else {
+                System.out.println("Kindly collect your cash of: " + n);
+            }
+        } catch (MinimumAccountBalance mab) {
+            mab.printStackTrace();
+        }
+    }
+}
+
+
+
+
+EMPLOYEEINCREMENTED SALARY -
+class Employee{
+float salary = 40000;
+void dispSalary()
+{
+System.out.println("The Employee salary is :" +salary);
+}
+}
+class PermanentEmp extends Employee{
+double hike = 0.5;
+void incrementSalary()
+{
+System.out.println("The Permanent Employee incremented salary is :" +(salary+(salary * hike)));
+}
+}
+class TemporaryEmp extends Employee{
+double hike = 0.35;
+void incrementSalary()
+{
+System.out.println("The Temporary Employee incremented salary is :" +(salary+(salary * hike)));
+}
+}
+public class HerInheritanceDemo
+{
+public static void main(String args[]){
+PermanentEmp p = new PermanentEmp();
+TemporaryEmp t = new TemporaryEmp();
+// All objects of inherited classes can access the method of class Employee
+p.dispSalary();
+p.incrementSalary();
+t.dispSalary();
+t.incrementSalary();
+}
+}
+
+
+
+
+JFRAME -
+import javax.swing.*;
+class Example{
+JMenu menu;
+JMenuItem a1,a2;
+Example()
+{
+JFrame a = new JFrame("Example");
+menu = new JMenu("options");
+JMenuBar m1 = new JMenuBar();
+a1 = new JMenuItem("example");
+a2 = new JMenuItem("example1");
+menu.add(a1);
+menu.add(a2);
+m1.add(menu);
+a.setJMenuBar(m1);
+a.setSize(400,400);
+a.setLayout(null);
+a.setVisible(true);
+}
+public static void main(String args[])
+{
+new Example();
+}
+}
+
+
+
+
+
+REGISTRATION FORM USING AWT - 
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*; 
+public class TestAWT extends Applet
+{
+Label l1,l2,l3;
+TextField t1,t2;
+Button b1,b2;
+public void init()
+{
+l1=new Label("First Number");
+l2=new Label("Second Number");
+t1=new TextField();
+t2=new TextField();
+b1=new Button ("Add");
+b2=new Button("Clear");
+l3=new Label();
+setLayout(null);
+l1.setBounds(30,50,100,20);
+l2.setBounds(30,100,100,20);
+t1.setBounds(150,50,100,20);
+t2.setBounds(150,100,100,20);
+b1.setBounds(100,150,80,20);
+b2.setBounds(200,150,80,20);
+l3.setBounds(30,180,100,20);
+add(l1);
+add(l2);
+add(t1);
+add(t2);
+add(b1);
+add(b2);
+add(l3);
+b1.addActionListener(new Handler());
+b2.addActionListener(new Handler());
+}
+public class Handler implements ActionListener
+{
+public void actionPerformed(ActionEvent e)
+{
+int a,b,s;
+if(e.getSource()==b1)
+{
+a=Integer.parseInt(t1.getText());
+b=Integer.parseInt(t2.getText());
+s=a+b;
+l3.setText("Sum is = "+s);
+} 
+else
+{
+t1.setText(null);
+t2.setText(null);
+l3.setText(null);
+}}}}
+/*
+<applet code=TestAWT.class width=500 height=500>
+</applet */
+
+
+
+
+APPLETHOUSE - 
+import java.awt.*;
+import java.applet.Applet;
+public class House extends Applet{
+public void paint(Graphics gp)
+{ int [] x = {150, 300, 225};
+int [] y = {150, 150, 25};
+gp.drawRect(150, 150, 150, 200); //House
+gp.drawRect(200, 200, 50, 150); // Door
+gp.drawOval(200, 75, 50, 50); // Skylight
+gp.drawPolygon(x, y, 3); // Roof
+}}
+/*
+<applet code="House.class" width=400 height=450></applet>
+*/
+
+
+
+
+APPLET SMILE - 
+import java.applet.*;
+import java.awt. *;
+public class Main extends Applet
+{
+public void paint (Graphics s)
+{
+s.drawLine(70,20,70,50);
+s.drawLine(40,60,100,60);
+s.drawOval(10,10,40,15);
+s.drawOval(90,10,40,15);
+s.drawRect(2,2,150,150);
+}}
+/* <applet code=Main.class WIDTH=800 HEIGHT=500>
+</applet> */
+
+
+
+
+
+JAVATHREAD - 
+import java.lang.Thread;
+class A extends Thread
+{
+ public void run ()
+ {
+ for (int i=1; i<=5; i++)
+ {
+ System.out.println("From thread A: "+i);
+ }
+ System.out.println("Exit from thread A");
+ } }
+class B extends Thread
+{
+ public void run ()
+ {
+ for (int j=1; j<=5; j++)
+ {
+ System.out.println("From thread B: "+j);
+ }
+ System.out.println("Exit from thread B"); 
+ } }
+class C extends Thread
+{
+ public void run ()
+ {
+ for (int k=1; k<=5; k++)
+ {
+ System.out.println("From thread C: "+k);
+ }
+ System.out.println("Exit from thread C"); 
+ } }
+class ThreadTest
+{ 
+ public static void main (String args[])
+ {
+ A a1=new A ();
+ B b1=new B ();
+ C c1=new C ();
+ 
+ a1. start ();
+ b1. start ();
+ c1. start ();
+ } }
+
+
+
+
+
+MATRIXMUL - 
+import java.util.*;
+public class Matrixmul
+{ public static void main(String args[])
+{ int i,j,n,k;
+int a[][] = new int [100][100];
+int b[][] = new int [100][100];
+int c[][] = new int [100][100];
+System.out.println("Enter the order of matrix");
+Scanner ob = new Scanner(System.in);
+n = on.nextIn();
+
+System.out.println("Enter the elements of 1 st matrix");
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+{ a[i][j] = on.nextIn();
+} }
+System.out.println("Enter the elemenst of 2nd matrix");
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+{ b[i][j] = on.nextIn();
+} }
+
+System.out.println("1st matrix is");
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+System.out.print(a[i][j]+"\t");
+} System.out.println();
+} 
+System.out.println("2nd matrix is");
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+System.out.print(b[i][j]+"\t");
+} System.out.println();
+} 
+
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+{ c[i][j] = 0;
+for(k=0;k<n;k++)
+{ c[i][j] = c[i][j] + a[i][j]
+
+System.out.println("Multiplication matrix is");
+for(i=0;i<n;i++)
+{ for(j=0;j<n;j++)
+{ System.out.print(c[i][j]+"\t");
+} System.out.println();
+}}}
+
+
+
+
+
+STRINGEXPT - 
+import java.util.*;
+class Stringexpt
+{ public static void main(String args[])
+{ int len;
+String s1 = "Shubham";
+String s2 = "karambrlkar";
+String s3 = "";
+String s4 = "adityayade";
+String s5 = "higovardhan";
+System.out.println("first string is "+s1);
+System.out.println("second string "+s2);
+len = s1.length();
+System.out.println("length of first string is "+len);
+len=s2.length();
+System.out.println("length of second string is "+len);
+s3=s1.toUpperCase();
+System.out.println("upper case of first string is "+s3);
+s3=s1.toLowerCase();
+System.out.println("lower case of first string is "+s3);
+s3=s4.substring(2,4);
+System.out.println("substring is "+s3);
+s3=s4.substring(2);
+System.out.println("substring is "+s3);
+s3=s5.trim();
+System.out.println("string after trimming is "+s3);
+s3=s1.replace('h', 'n');
+System.out.printlnstring after replacing t by n is "+s3);
+char s6 = s1.charAt(4);
+System.out.println("character at 4th position "+s6);
+
+if(s1.equals(s2) == true)
+{ System.out.println("string are equal");
+} else
+{ System.out.println("string are not equal");
+} 
+
+if(s1.compareTo(s2) == 0)
+{ System.out.println("string are equal");
+} else
+{ System.out.println("string are not equal");
+}
+s3 = s1.concat(s2);
+System.out.println("concated string is" +s3);
+} }
+
+
+
+
+
